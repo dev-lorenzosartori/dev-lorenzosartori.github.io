@@ -23,7 +23,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Lorenzo Sartori"
   pronouns         : # example: "she/her"  
   bio              : "Data Scientist focused on BI, operations analytics and process automation, with experience transforming operational, financial and project data into predictive insights, executive dashboards and KPI governance routines. Skilled in Python, scikit-learn, XGBoost, TensorFlow, PyTorch, SQL, Power BI, Power Query, SAP and statistical analysis, with applied experience in logistics, infrastructure and product development environments."
