@@ -19,7 +19,6 @@ Professional portfolio focused on industrial project leadership, manufacturing e
 ## Selected experience
 
 - **TK Elevator:** Global Product Design Center leadership, executive governance and R$ 820,000 in documented value-engineering savings.
-- **Aegea:** Regional CAPEX governance across 54 municipalities.
 - **Localiza:** Operational expansion with cross-functional supplier, engineering and airport stakeholder coordination.
 
 ## Applied research
