@@ -3,6 +3,8 @@
 Professional portfolio focused on industrial project leadership, manufacturing expansion, executive governance, CAPEX and production engineering.
 
 - Portfolio: https://dev-lorenzosartori.github.io/
+- Download CV: https://dev-lorenzosartori.github.io/Lorenzo_Sartori_Senior_Project_Manager.pdf
+- Contact: lorenzo.sartori.dev@gmail.com
 - LinkedIn: https://www.linkedin.com/in/lorenzo-sartori/
 - GitHub: https://github.com/dev-lorenzosartori
 - Deployment: GitHub Pages from the repository root
@@ -19,7 +21,7 @@ Professional portfolio focused on industrial project leadership, manufacturing e
 ## Selected experience
 
 - **TK Elevator:** Global Product Design Center leadership, executive governance and R$ 820,000 in documented value-engineering savings.
-- **Localiza:** Operational expansion with cross-functional supplier, engineering and airport stakeholder coordination.
+- **Localiza:** Operational expansion and stakeholder coordination in an airport operation handling approximately 700 vehicle rentals per day, with continuous 24/7 service.
 
 ## Applied research
 

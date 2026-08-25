@@ -39,7 +39,14 @@
 
     .skip-link:focus { top: 14px; }
 
-    .main-nav { gap: 29px; }
+    .main-nav { gap: 24px; }
+
+    .cv-nav-link {
+      padding: 8px 11px !important;
+      border: 1px solid #44d7e86b;
+      color: var(--cyan) !important;
+      white-space: nowrap;
+    }
 
     .system-status strong { color: var(--lime); }
 
@@ -128,7 +135,7 @@
 
     .impact-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .impact-item {
@@ -270,6 +277,45 @@
 
     .case-tags { margin-top: 24px; }
 
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+      margin-top: 22px;
+    }
+
+    .case-metric {
+      padding: 13px 15px 12px;
+      border: 1px solid #44d7e84b;
+      background: #07101699;
+    }
+
+    .case-metric strong {
+      display: block;
+      color: var(--cyan);
+      font-size: 25px;
+      font-weight: 570;
+      letter-spacing: -.04em;
+      line-height: 1.08;
+    }
+
+    .case-metric span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+
+    .case-metrics-note {
+      margin: 8px 0 0;
+      color: var(--quiet);
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+
     .compact-case { padding: 33px 35px 36px; }
 
     .compact-case .case-title {
@@ -317,6 +363,23 @@
       font-size: 10px;
     }
 
+    .capability-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .capability-icon {
+      display: grid;
+      width: 26px;
+      height: 26px;
+      place-items: center;
+      border: 1px solid #44d7e84b;
+      color: var(--cyan);
+      font-size: 14px;
+    }
+
     .capability-card h3 {
       margin: 19px 0 11px;
       font-size: 20px;
@@ -324,17 +387,36 @@
       letter-spacing: -.035em;
     }
 
-    .capability-card p {
+    .capability-list {
+      display: grid;
+      gap: 9px;
       margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .capability-list li {
+      position: relative;
+      padding-left: 13px;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .capability-list li::before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      background: var(--cyan);
+      content: "";
     }
 
     .tools-rail {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 25px;
+      gap: 10px;
       align-items: center;
       margin-top: 25px;
       color: #bac6ca;
@@ -343,8 +425,23 @@
     }
 
     .tools-rail span:first-child {
+      margin-right: 8px;
       color: var(--quiet);
       letter-spacing: .12em;
+    }
+
+    .tool-chip {
+      padding: 8px 11px;
+      border: 1px solid var(--border);
+      background: #0b151d;
+      color: #d9e3e5;
+      white-space: nowrap;
+    }
+
+    .tool-chip strong {
+      margin-right: 6px;
+      color: var(--cyan);
+      font-size: 9px;
     }
 
     .research-section { padding-block: 110px 106px; }
@@ -361,22 +458,131 @@
       font-size: clamp(34px, 3.2vw, 46px);
     }
 
-    .governance-visual {
+    .analysis-visual {
       display: grid;
-      align-content: center;
-      min-height: 237px;
-      padding: 29px 33px;
+      grid-template-rows: minmax(188px, 1fr) auto;
+      min-height: 287px;
       border-bottom: 1px solid var(--border);
-      background-color: #081117;
-      background-image: linear-gradient(#44d7e80b 1px, transparent 1px), linear-gradient(90deg, #44d7e80b 1px, transparent 1px);
-      background-size: 31px 31px;
+      background: #eef2f4;
     }
 
-    .governance-visual .ops-labels { margin-bottom: 14px; }
+    .analysis-figure {
+      display: grid;
+      min-height: 0;
+      margin: 0;
+      padding: 9px 13px 0;
+      place-items: center;
+    }
 
-    .governance-visual .ops-bars { height: 93px; }
+    .analysis-figure img {
+      display: block;
+      width: 100%;
+      max-height: 230px;
+      object-fit: contain;
+    }
 
-    .governance-visual .ops-flow { margin-top: 23px; }
+    .code-preview {
+      overflow-x: auto;
+      margin: 0;
+      padding: 13px 15px;
+      border-top: 1px solid #44d7e833;
+      background: #09131a;
+      color: #c9d7db;
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 10px;
+      line-height: 1.62;
+      white-space: pre;
+    }
+
+    .code-keyword { color: var(--cyan); }
+
+    .code-string { color: var(--lime); }
+
+    .dashboard-mockup {
+      display: grid;
+      gap: 13px;
+      min-height: 287px;
+      padding: 17px;
+      border-bottom: 1px solid var(--border);
+      background: #081117;
+    }
+
+    .dashboard-topbar,
+    .dashboard-footnote {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: #c4d1d5;
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 8px;
+      letter-spacing: .08em;
+    }
+
+    .dashboard-topbar span:last-child,
+    .dashboard-footnote { color: var(--quiet); }
+
+    .dashboard-kpis {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .dashboard-kpi {
+      min-width: 0;
+      padding: 10px 9px;
+      border: 1px solid var(--border);
+      background: #101c25;
+    }
+
+    .dashboard-kpi span,
+    .dashboard-kpi strong { display: block; }
+
+    .dashboard-kpi span {
+      color: var(--quiet);
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 8px;
+    }
+
+    .dashboard-kpi strong {
+      margin-top: 6px;
+      color: #dbe5e8;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .dashboard-timeline {
+      display: grid;
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: 8px 12px;
+      padding: 11px;
+      border: 1px solid var(--border);
+      background: #0b151d;
+    }
+
+    .timeline-label {
+      align-self: center;
+      color: #b6c5ca;
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 8px;
+    }
+
+    .timeline-track {
+      position: relative;
+      height: 15px;
+      background: repeating-linear-gradient(90deg, #ffffff0d 0, #ffffff0d 1px, transparent 1px, transparent 25%);
+    }
+
+    .timeline-track i {
+      position: absolute;
+      top: 4px;
+      left: var(--offset, 0%);
+      width: var(--length, 50%);
+      height: 7px;
+      background: var(--cyan);
+      opacity: .78;
+    }
+
+    .timeline-track:nth-of-type(4) i { background: var(--lime); }
 
     .writing-section { padding-block: 97px 105px; }
 
@@ -440,10 +646,59 @@
 
     .footer-grid h2 { max-width: 760px; }
 
+    .contact-email {
+      display: inline-flex;
+      margin-top: 15px;
+      color: var(--cyan);
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 13px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .contact-form label {
+      color: #aebbc0;
+      font-family: var(--font-geist-mono), monospace;
+      font-size: 10px;
+      letter-spacing: .06em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 11px 12px;
+      border: 1px solid var(--border);
+      background: #0b151d;
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--cyan);
+      outline: 0;
+    }
+
+    .contact-form textarea {
+      min-height: 83px;
+      resize: vertical;
+    }
+
+    .contact-form .button {
+      width: 100%;
+      cursor: pointer;
+    }
+
     .footer-base span:nth-child(2) { text-align: center; }
 
     @media (max-width: 1180px) {
-      .main-nav { gap: 19px; margin-right: 20px; }
+      .main-nav { gap: 15px; margin-right: 17px; font-size: 11px; }
       .hero { grid-template-columns: minmax(340px, 1fr) minmax(395px, .98fr); gap: 40px; }
       .hero h1 { font-size: clamp(52px, 5.7vw, 70px); }
       .impact-item { padding-inline: 21px; }
@@ -462,11 +717,9 @@
 
       .hero h1 { max-width: 750px; }
       .signal-visual { min-height: 315px; }
-      .impact-grid { grid-template-columns: 1fr 1fr; }
+      .impact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .impact-item { min-height: 142px; }
       .impact-item:first-child { padding-left: 22px; }
-      .impact-item:nth-child(2) { border-right: 0; }
-      .impact-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
       .impact-item:last-child { padding-right: 22px; }
       .experience-section { padding-block: 88px 94px; }
       .flagship-body { grid-template-columns: 1fr; gap: 27px; }
@@ -476,7 +729,8 @@
       .capability-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
       .research-grid,
       .writing-layout { grid-template-columns: 1fr; }
-      .governance-visual { min-height: 220px; }
+      .analysis-visual,
+      .dashboard-mockup { min-height: 260px; }
     }
 
     @media (max-width: 700px) {
@@ -488,9 +742,10 @@
       .module-rail { grid-template-columns: 1fr 1fr; }
       .module-rail > div:nth-child(2) { display: none; }
       .visual-caption { right: 13px; bottom: 14px; max-width: 215px; }
-      .impact-item { min-height: 133px; padding: 24px 13px 20px; }
+      .impact-grid { grid-template-columns: 1fr; }
+      .impact-item { min-height: 104px; padding: 20px 13px; border-right: 0; border-bottom: 1px solid var(--border); }
       .impact-item:first-child { padding-left: 13px; }
-      .impact-item:last-child { padding-right: 13px; }
+      .impact-item:last-child { padding-right: 13px; border-bottom: 0; }
       .impact-value { font-size: clamp(24px, 7vw, 33px); }
       .impact-note { font-size: 9px; }
       .experience-section { padding-block: 78px 79px; }
@@ -498,13 +753,22 @@
       .experience-flagship { grid-column: auto; }
       .flagship-body { padding: 28px 23px 31px; }
       .case-detail { grid-template-columns: 87px minmax(0, 1fr); gap: 10px; }
+      .case-metrics { gap: 8px; }
+      .case-metric { padding-inline: 10px; }
+      .case-metric strong { font-size: 21px; }
       .compact-case { padding: 27px 24px 30px; }
       .capability-section { padding-block: 78px 82px; }
       .capability-grid { grid-template-columns: 1fr; margin-top: 32px; }
       .capability-card { padding: 23px 22px 24px; border-right: 0; border-bottom: 1px solid var(--border); }
       .capability-card:last-child { border-bottom: 0; }
       .research-section { padding-block: 80px 82px; }
-      .governance-visual { min-height: 198px; padding-inline: 20px; }
+      .analysis-visual { min-height: 230px; }
+      .analysis-figure { padding-inline: 5px; }
+      .dashboard-mockup { min-height: 246px; padding: 12px; }
+      .dashboard-kpi { padding-inline: 6px; }
+      .dashboard-kpi strong { font-size: 10px; }
+      .dashboard-timeline { grid-template-columns: 63px minmax(0, 1fr); gap: 7px 8px; padding: 8px; }
+      .code-preview { font-size: 8px; }
       .writing-section { padding-block: 79px 82px; }
       .article-main-content { padding: 29px 25px 31px; }
       .article-secondary-content { padding: 27px 25px; }
@@ -526,7 +790,8 @@
       <a href="#capabilities">Capabilities</a>
       <a href="#work">Case studies</a>
       <a href="#writing">Writing</a>
-      <a href="https://www.linkedin.com/in/lorenzo-sartori/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="#contact">Contact</a>
+      <a class="cv-nav-link" href="/Lorenzo_Sartori_Senior_Project_Manager.pdf" download>Download CV ↓</a>
     </nav>
     <div class="system-status" aria-label="Open to international industrial project opportunities">
       <span class="status-dot" aria-hidden="true"></span>
@@ -543,7 +808,7 @@
         <p class="hero-summary">Leading industrial expansion, cross-functional execution and executive governance — from investment decisions and critical schedules to operational readiness.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#experience">Explore project experience <span class="button-arrow" aria-hidden="true">→</span></a>
-          <a class="button button-secondary" href="https://www.linkedin.com/in/lorenzo-sartori/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="external-arrow" aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="/Lorenzo_Sartori_Senior_Project_Manager.pdf" download>Download CV <span class="button-arrow" aria-hidden="true">↓</span></a>
         </div>
         <p class="availability">
           <span class="status-dot" aria-hidden="true"></span>
@@ -583,11 +848,6 @@
           <span class="impact-label">Value engineering</span>
           <strong class="impact-value">R$ 820K</strong>
           <span class="impact-note">Documented direct project savings</span>
-        </div>
-        <div class="impact-item">
-          <span class="impact-label">Recent companies</span>
-          <strong class="impact-value">2</strong>
-          <span class="impact-note">TK Elevator and Localiza</span>
         </div>
         <div class="impact-item">
           <span class="impact-label">Flagship delivery</span>
@@ -661,8 +921,19 @@
             <div>
               <p class="case-company">Localiza · Porto Alegre airport operations</p>
               <h3 class="case-title">Large-scale operations expansion.</h3>
-              <p class="case-summary">Project Manager coordinating the operational expansion of Localiza’s flagship airport unit. Managed suppliers, contracts and execution interfaces across Operations, Procurement, Engineering and airport operator Fraport.</p>
+              <p class="case-summary">Project Manager coordinating the expansion of a high-throughput airport operation handling approximately 700 vehicle rentals per day, with continuous 24/7 service. Managed suppliers, contracts and execution interfaces across Operations, Procurement, Engineering and airport operator Fraport.</p>
               <p class="case-summary">Established project visibility through governance dashboards and coordinated multidisciplinary demands to support operational readiness.</p>
+              <div class="case-metrics" aria-label="Verified Localiza operational context">
+                <div class="case-metric">
+                  <strong>~700 / day</strong>
+                  <span>Vehicle rentals at the airport operation</span>
+                </div>
+                <div class="case-metric">
+                  <strong>24 / 7</strong>
+                  <span>Continuous operational environment</span>
+                </div>
+              </div>
+              <p class="case-metrics-note">Verified operating context; project CAPEX and delivery gains are not claimed without documented figures.</p>
               <ul class="tag-list case-tags" aria-label="Operational expansion project capabilities">
                 <li>Project Delivery</li>
                 <li>Contract Management</li>
@@ -684,8 +955,8 @@
                 <dd>Contract administration, supplier governance and executive dashboards</dd>
               </div>
               <div class="case-detail">
-                <dt>Outcome</dt>
-                <dd>Structured execution visibility and operational readiness alignment</dd>
+                <dt>Scale</dt>
+                <dd>Approximately 700 vehicle rentals per day in a 24/7 airport operation</dd>
               </div>
             </dl>
           </div>
@@ -705,36 +976,52 @@
 
         <div class="capability-grid">
           <article class="capability-card">
-            <span class="capability-index">01 / DIRECTION</span>
+            <div class="capability-topline"><span class="capability-index">01 / DIRECTION</span><span class="capability-icon" aria-hidden="true">◎</span></div>
             <h3>Project strategy</h3>
-            <p>Scope definition, investment priorities, feasibility, value engineering and delivery planning.</p>
+            <ul class="capability-list">
+              <li>Scope and investment priorities</li>
+              <li>Value engineering and feasibility</li>
+              <li>Delivery planning and milestones</li>
+            </ul>
           </article>
           <article class="capability-card">
-            <span class="capability-index">02 / EXECUTION</span>
+            <div class="capability-topline"><span class="capability-index">02 / EXECUTION</span><span class="capability-icon" aria-hidden="true">↗</span></div>
             <h3>Industrial delivery</h3>
-            <p>Critical schedules, equipment integration, suppliers, commissioning interfaces and production continuity.</p>
+            <ul class="capability-list">
+              <li>Critical schedules and suppliers</li>
+              <li>Equipment and commissioning</li>
+              <li>Live-production continuity</li>
+            </ul>
           </article>
           <article class="capability-card">
-            <span class="capability-index">03 / GOVERNANCE</span>
+            <div class="capability-topline"><span class="capability-index">03 / GOVERNANCE</span><span class="capability-icon" aria-hidden="true">◈</span></div>
             <h3>Executive alignment</h3>
-            <p>Board-level reporting, multidisciplinary coordination, decision escalation and stakeholder management.</p>
+            <ul class="capability-list">
+              <li>Board-level project reporting</li>
+              <li>Cross-functional coordination</li>
+              <li>Stakeholders and decisions</li>
+            </ul>
           </article>
           <article class="capability-card">
-            <span class="capability-index">04 / PERFORMANCE</span>
+            <div class="capability-topline"><span class="capability-index">04 / PERFORMANCE</span><span class="capability-icon" aria-hidden="true">▣</span></div>
             <h3>Operational excellence</h3>
-            <p>CAPEX control, operational KPIs, continuous improvement and data-supported management decisions.</p>
+            <ul class="capability-list">
+              <li>CAPEX and project controls</li>
+              <li>Operational KPIs and dashboards</li>
+              <li>Continuous improvement</li>
+            </ul>
           </article>
         </div>
 
         <div class="tools-rail" aria-label="Project management and analytics tools">
           <span>WORKING TOOLKIT</span>
-          <span>MS Project</span>
-          <span>Power BI</span>
-          <span>Advanced Excel</span>
-          <span>SAP</span>
-          <span>SQL</span>
-          <span>Power Query</span>
-          <span>Python</span>
+          <span class="tool-chip"><strong>PM</strong> MS Project</span>
+          <span class="tool-chip"><strong>BI</strong> Power BI</span>
+          <span class="tool-chip"><strong>XL</strong> Advanced Excel</span>
+          <span class="tool-chip"><strong>ERP</strong> SAP</span>
+          <span class="tool-chip"><strong>DB</strong> SQL</span>
+          <span class="tool-chip"><strong>ETL</strong> Power Query</span>
+          <span class="tool-chip"><strong>PY</strong> Python</span>
         </div>
       </div>
     </section>
@@ -754,9 +1041,12 @@
             <span>PRJ_01 · INDUSTRIAL RELIABILITY</span>
             <span class="project-state"><i aria-hidden="true"></i> PUBLIC REPOSITORY</span>
           </div>
-          <div class="project-visual">
-            <img src="/project-survival.png" alt="Abstract survival curves and industrial equipment reliability signals" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-            <span class="visual-tag">PREDICTIVE MAINTENANCE</span>
+          <div class="analysis-visual">
+            <figure class="analysis-figure">
+              <img src="https://raw.githubusercontent.com/dev-lorenzosartori/probabilistic-survival-analysis/main/reports/figures/cmapss_km_overall_landmark30.png" alt="Actual Kaplan-Meier residual survival curve for the C-MAPSS industrial engine dataset" loading="lazy" decoding="async">
+            </figure>
+            <pre class="code-preview" aria-label="Excerpt from the actual Python project"><span class="code-keyword">km_all</span> = kaplan_meier(df[<span class="code-string">"time_after_landmark"</span>], df[<span class="code-string">"event_observed"</span>])
+ax.step(km_all[<span class="code-string">"time"</span>], km_all[<span class="code-string">"survival"</span>], where=<span class="code-string">"post"</span>)</pre>
           </div>
           <div class="project-content">
             <p class="project-type">Industrial asset reliability</p>
@@ -777,10 +1067,20 @@
             <span>PRJ_02 · PROJECT CONTROLS</span>
             <span class="project-state project-state-cyan"><i aria-hidden="true"></i> APPLIED GOVERNANCE</span>
           </div>
-          <div class="governance-visual" aria-hidden="true">
-            <div class="ops-labels"><span>SCOPE</span><span>SCHEDULE</span><span>CAPEX</span><span>RISK</span></div>
-            <div class="ops-bars"><i style="--value:72%"></i><i style="--value:58%"></i><i style="--value:86%"></i><i style="--value:65%"></i></div>
-            <div class="ops-flow"><span>PROJECT DATA</span><b>›</b><span>GOVERNANCE</span><b>›</b><span>EXECUTIVE ACTION</span></div>
+          <div class="dashboard-mockup" aria-label="Illustrative project-controls dashboard layout; not a client screenshot">
+            <div class="dashboard-topbar"><span>PROJECT CONTROLS / EXECUTIVE VIEW</span><span>POWER BI</span></div>
+            <div class="dashboard-kpis">
+              <div class="dashboard-kpi"><span>SCHEDULE</span><strong>Milestones</strong></div>
+              <div class="dashboard-kpi"><span>CAPEX</span><strong>Investment</strong></div>
+              <div class="dashboard-kpi"><span>RISK</span><strong>Escalations</strong></div>
+            </div>
+            <div class="dashboard-timeline" aria-hidden="true">
+              <span class="timeline-label">ENGINEERING</span><span class="timeline-track"><i style="--offset:3%;--length:61%"></i></span>
+              <span class="timeline-label">PROCUREMENT</span><span class="timeline-track"><i style="--offset:18%;--length:51%"></i></span>
+              <span class="timeline-label">INSTALLATION</span><span class="timeline-track"><i style="--offset:38%;--length:45%"></i></span>
+              <span class="timeline-label">READINESS</span><span class="timeline-track"><i style="--offset:72%;--length:23%"></i></span>
+            </div>
+            <div class="dashboard-footnote"><span>ILLUSTRATIVE PROJECT-CONTROLS MOCKUP</span><span>NOT CLIENT DATA</span></div>
           </div>
           <div class="project-content">
             <p class="project-type">Executive project intelligence</p>
@@ -848,10 +1148,18 @@
       </div>
       <div class="footer-contact">
         <p>Open to Senior Project Manager, Industrial Project Manager, PMO and operational excellence opportunities in manufacturing and industrial environments.</p>
+        <a class="contact-email" href="mailto:lorenzo.sartori.dev@gmail.com">lorenzo.sartori.dev@gmail.com</a>
         <div class="footer-actions">
-          <a class="button button-primary" href="https://www.linkedin.com/in/lorenzo-sartori/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span class="external-arrow" aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="https://github.com/dev-lorenzosartori" target="_blank" rel="noopener noreferrer">Explore technical projects <span class="external-arrow" aria-hidden="true">↗</span></a>
+          <a class="button button-primary" href="/Lorenzo_Sartori_Senior_Project_Manager.pdf" download>Download project management CV <span class="button-arrow" aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/lorenzo-sartori/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span class="external-arrow" aria-hidden="true">↗</span></a>
         </div>
+        <form class="contact-form" action="mailto:lorenzo.sartori.dev@gmail.com" method="get">
+          <label for="contact-subject">Subject</label>
+          <input id="contact-subject" name="subject" type="text" placeholder="Industrial project opportunity" required>
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="body" placeholder="Share your project, role or introduction." required></textarea>
+          <button class="button button-secondary" type="submit">Open email draft <span class="button-arrow" aria-hidden="true">→</span></button>
+        </form>
       </div>
     </div>
     <div class="shell footer-base">
