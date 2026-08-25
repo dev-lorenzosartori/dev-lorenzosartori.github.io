@@ -1,10 +1,30 @@
-# Lorenzo Sartori — Data Science Portfolio
+# Lorenzo Sartori — Senior Project Manager | Industrial Projects & CAPEX
 
-Static GitHub Pages export of the Signal Grid portfolio.
+Professional portfolio focused on industrial project leadership, manufacturing expansion, executive governance, CAPEX and production engineering.
 
 - Portfolio: https://dev-lorenzosartori.github.io/
 - LinkedIn: https://www.linkedin.com/in/lorenzo-sartori/
 - GitHub: https://github.com/dev-lorenzosartori
 - Deployment: GitHub Pages from the repository root
 
-The site presents selected Data Science, MLOps, operations analytics, Power BI, technical writing, and public repository work for international recruiters.
+## Professional focus
+
+- Industrial and production-related project management
+- Global Product Design Center and factory expansion delivery
+- CAPEX governance, value engineering and project controls
+- Executive stakeholder management and multidisciplinary coordination
+- Operational excellence, production continuity and equipment integration
+- Decision support through Power BI, MS Project, SAP, SQL and advanced Excel
+
+## Selected experience
+
+- **TK Elevator:** Global Product Design Center leadership, executive governance and R$ 820,000 in documented value-engineering savings.
+- **Aegea:** Regional CAPEX governance across 54 municipalities.
+- **Localiza:** Operational expansion with cross-functional supplier, engineering and airport stakeholder coordination.
+
+## Applied research
+
+- Probabilistic Survival Analysis: industrial asset reliability and predictive maintenance.
+- From Data Drift to Kubernetes: dependable analytical systems in operational environments.
+
+Built for international industrial, manufacturing and project management opportunities.
