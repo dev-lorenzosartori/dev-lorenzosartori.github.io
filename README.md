@@ -25,6 +25,7 @@ Professional portfolio focused on industrial project leadership, manufacturing e
 
 ## Applied research
 
+- **MetalFlow Production Optimization — flagship case:** deterministic industrial decision case spanning bottleneck diagnosis, finite-capacity scheduling, SMED, investment governance, implementation control and benefits realization. Uses fully synthetic data and publishes reproducible validation evidence.
 - Probabilistic Survival Analysis: industrial asset reliability and predictive maintenance.
 - From Data Drift to Kubernetes: dependable analytical systems in operational environments.
 
