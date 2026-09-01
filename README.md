@@ -1,6 +1,6 @@
-# Lorenzo Sartori — Senior Project Manager | Industrial Projects & CAPEX
+# Lorenzo Sartori — Project Manager | Industrial Projects, KPI, BI & Lean
 
-Professional portfolio focused on industrial project leadership, manufacturing expansion, executive governance, CAPEX and production engineering.
+Professional portfolio focused on complex project delivery supported by KPI governance, business intelligence, Lean practices and industrial experience.
 
 - Portfolio: https://dev-lorenzosartori.github.io/
 - Download CV: https://dev-lorenzosartori.github.io/Lorenzo_Sartori_Senior_Project_Manager.pdf
