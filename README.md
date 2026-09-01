@@ -3,7 +3,7 @@
 Professional portfolio focused on complex project delivery supported by KPI governance, business intelligence, Lean practices and industrial experience.
 
 - Portfolio: https://dev-lorenzosartori.github.io/
-- Download CV: https://dev-lorenzosartori.github.io/Lorenzo_Sartori_Senior_Project_Manager.pdf
+- Download CV: https://dev-lorenzosartori.github.io/Curriculo_Lorenzo_Sartori_PM.pdf
 - Contact: lorenzo.sartori.dev@gmail.com
 - LinkedIn: https://www.linkedin.com/in/lorenzo-sartori/
 - GitHub: https://github.com/dev-lorenzosartori
